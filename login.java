@@ -24,52 +24,52 @@ public class login extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Label lbl = new Label("User Name");
-        lbl.setFont(new Font("Arial", 16));//تحديد نوع وحجم النص
-        lbl.setTextFill(Color.RED);//تحديد لون النص
+        lbl.setFont(new Font("Arial", 16));
+        lbl.setTextFill(Color.RED);
         Label lbl2 = new Label();
-        lbl2.setFont(new Font("Arial", 16));//تحديد حجم ونوع النص
-        lbl2.setTextFill(Color.RED);//تحديد لون النص
-        lbl2.setText("PassWord");//وضع نص داخل المربع
+        lbl2.setFont(new Font("Arial", 16));
+        lbl2.setTextFill(Color.RED);
+        lbl2.setText("PassWord");
         TextField username = new TextField();
         PasswordField password = new PasswordField();
         HBox r = new HBox(lbl, username);
-        r.setSpacing(25);//مسافة 
-        r.setAlignment(Pos.CENTER);// التحكم في الموضع
-        username.setPromptText("ENTER USERNAME");//لوضع نص داخل المربع
-        password.setPromptText("ENTER PASSWORD");//لوضع نص داخل المربع
-        username.setFocusTraversable(false);//لعدم التركيز على النص داخل المربع
-        password.setFocusTraversable(false);//لعدم التركيز على النص داخل المربع
-        Separator sp = new Separator();//لوضع خط فاصل 
+        r.setSpacing(25);
+        r.setAlignment(Pos.CENTER);
+        username.setPromptText("ENTER USERNAME");
+        password.setPromptText("ENTER PASSWORD");
+        username.setFocusTraversable(false);
+        password.setFocusTraversable(false);
+        Separator sp = new Separator();
         HBox r2 = new HBox(lbl2, password);
-        r2.setSpacing(25);//وضع مسافه بينه وبين الاشياء الاخرى
-        r2.setAlignment(Pos.CENTER);//التحكم في مكان تواجده
+        r2.setSpacing(25);
+        r2.setAlignment(Pos.CENTER);
 
-        CheckBox cb = new CheckBox("remember me");//لعمل check box 
+        CheckBox cb = new CheckBox("remember me");
         cb.setTextFill(Color.BLUE);
         cb.setFont(new Font("Arial", 12));
 
-        Button btn = new Button("Login");//انشاء زر واعطاؤه اسم
-        btn.setFont(new Font("Arial", 16));//التحكم في نوع وحجم النص
-        btn.setTextFill(Color.CYAN);//التحكم في لون النص
-        btn.setBackground(new Background(new BackgroundFill(Color.BLACK, new CornerRadii(16), Insets.EMPTY)));//التحكم في تفاصيل الزر
-        VBox root = new VBox(20);//استدعاء مربع الواجهة
-        root.getChildren().addAll(r, r2, sp, btn, cb);//لاضافة الازرار داخل الواجهة 
-        root.setAlignment(Pos.CENTER);//للتحكم في اماكن وجود الازرار
-        root.setBackground(Background.EMPTY);//للتحكم في الخلفية الاخاصة في الروت (الخافية الرئيسية)
-        root.setPadding(new Insets(8)); //لتحديد الحواف الداخلية للزر
-        Scene s = new Scene(root, 720, 410);//اضافة بيانات الازرار
-        s.setFill(Color.PEACHPUFF);//تحديد لون الخلفية
-        stage.setScene(s);//ربط المتغيرالي عملناه مع الشاشة
-        stage.setResizable(false);//يمنع المستخدم من تغيير حجم النافذة
-        stage.setMaximized(false);//يمنع النافذة من الفتح بحجم الشاشةالكامل
-        stage.setTitle("Login");//يضع عنوان للواجهة
-        stage.setAlwaysOnTop(false);//يحدد وضع ملئ الشاشة
-        stage.show();//يعرض النافذة للمستخدم
+        Button btn = new Button("Login");
+        btn.setFont(new Font("Arial", 16));
+        btn.setTextFill(Color.CYAN);
+        btn.setBackground(new Background(new BackgroundFill(Color.BLACK, new CornerRadii(16), Insets.EMPTY)));
+        VBox root = new VBox(20);
+        root.getChildren().addAll(r, r2, sp, btn, cb);
+        root.setAlignment(Pos.CENTER);
+        root.setBackground(Background.EMPTY);
+        root.setPadding(new Insets(8)); 
+        Scene s = new Scene(root, 720, 410);
+        s.setFill(Color.PEACHPUFF);
+        stage.setScene(s);
+        stage.setResizable(false);
+        stage.setMaximized(false);
+        stage.setTitle("Login");
+        stage.setAlwaysOnTop(false);
+        stage.show();
 
     }
 
     public static void main(String[] args) {
-        launch(args);//لازم استدعائها عشان يشتغل البرنامج صح
+        launch(args);
     }
 
 }
